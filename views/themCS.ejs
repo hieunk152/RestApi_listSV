@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thêm Dữ Liệu Chi Nhánh</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        form label {
+            margin-top: 10px;
+        }
+
+        form input {
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            width: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h2>Thêm Chi Nhánh</h2>
+
+<form action="/themCS" method="POST" >
+    <label for="branchName">Tên chi nhánh</label>
+    <input name="chiNhanh" type="text" id="branchName" placeholder="Nhập tên chi nhánh" required>
+
+    <label for="location">Địa điểm</label>
+    <input name="diaDiem" type="text" id="location" placeholder="Nhập địa điểm" required>
+
+    <label for="students">Số lượng sinh viên</label>
+    <input name="slSV" type="number" id="students" placeholder="Nhập số lượng sinh viên" required>
+
+    <label for="teachers">Số lượng giảng viên</label>
+    <input name="slGV" type="number" id="teachers" placeholder="Nhập số lượng giảng viên" required>
+
+    <button type="submit" value="submit" >Thêm</button>
+</form>
+</body>
+</html>

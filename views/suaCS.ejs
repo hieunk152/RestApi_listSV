@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sua Dữ Liệu Chi Nhánh</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        form label {
+            margin-top: 10px;
+        }
+
+        form input {
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            width: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h2>Sua Chi Nhánh</h2>
+
+<form action="/suacs/<%=coso._id%>" method="POST" >
+    <label for="branchName">Tên chi nhánh</label>
+    <input value="<%=coso.chiNhanh%>"  name="chiNhanh" type="text" id="branchName" placeholder="Nhập tên chi nhánh" required>
+
+    <label for="location">Địa điểm</label>
+    <input  value="<%=coso.diaDiem%>" name="diaDiem" type="text" id="location" placeholder="Nhập địa điểm" required>
+
+    <label for="students">Số lượng sinh viên</label>
+    <input value="<%=coso.slSV%>" name="slSV" type="number" id="students" placeholder="Nhập số lượng sinh viên" required>
+
+    <label for="teachers">Số lượng giảng viên</label>
+    <input value="<%=coso.slGV%>" name="slGV" type="number" id="teachers" placeholder="Nhập số lượng giảng viên" required>
+
+    <button type="submit" value="submit" >Sua</button>
+</form>
+</body>
+</html>

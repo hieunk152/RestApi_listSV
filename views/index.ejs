@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      table, th, td {
+        border: 1px solid black;
+      }
+
+      th, td {
+        padding: 10px;
+        text-align: center;
+      }
+
+      button {
+        padding: 5px 10px;
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Bảng Thông Tin Chi Nhánh</h2>
+    <a href="/them/"><button>Them</button></a>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Tên chi nhánh</th>
+      <th>Địa điểm</th>
+      <th>Số lượng sinh viên</th>
+      <th>Số lượng giảng viên</th>
+    </tr>
+    </thead>
+      <tbody>
+      <% cosos.forEach(function (coso){%>
+          <tr>
+              <td><%= coso.chiNhanh%></td>
+              <td><%= coso.diaDiem%></td>
+              <td><%= coso.slSV%></td>
+              <td><%= coso.slGV%></td>
+              <td>
+                  <a href="/sua/<%= coso._id%>"><button>Sửa</button></a>
+                  <a href="/xoa/<%= coso._id%>"><button>Xoa</button></a>
+              </td>
+          </tr>
+      <% })%>
+      </tbody>
+  </table>
+  </body>
+</html>
