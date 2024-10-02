@@ -70,7 +70,7 @@ router.get('/sua/:id', function(req, res) {
   })
 })
 //fill info on UI
-router.post('/suaUser/:id',function(req,res){
+router.post('/users/:id',function(req,res){
   const id = req.params.id;
   const {email, password,nameUser} = req.body;
   User.findByIdAndUpdate(id,{
