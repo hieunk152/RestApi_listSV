@@ -14,17 +14,14 @@ connect(mongoURI,{
   console.log("Connected to MongoDB fail",err);
 }));
 
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   //req: request: du lieu gui len
   //res: respone: du lieu tra ve cho client
-  console.log('dfsdfsd')
   CoSo.find({}).then((cosos)=>{
     res.render('index', { title: 'Danh sách các cơ sở',cosos:cosos });
   })
 });
-
 module.exports = router;
 //Creat Object
 const CosoSchema = new Schema({
@@ -92,3 +89,6 @@ router.post('/suacs/:id',function (req,res){
     res.send(error);
   })
 })
+
+
+

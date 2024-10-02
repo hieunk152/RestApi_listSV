@@ -25,9 +25,9 @@
     </style>
   </head>
   <body>
-    <h2>Bảng Thông Tin Chi Nhánh</h2>
+    <h2><%=title%></h2>
     <a href="/them/"><button>Them</button></a>
-
+    <a href="/users/"><button>ShowInfo_User</button></a>
   <table>
     <thead>
     <tr>
@@ -35,6 +35,8 @@
       <th>Địa điểm</th>
       <th>Số lượng sinh viên</th>
       <th>Số lượng giảng viên</th>
+        <th>Chức năng</th>
+
     </tr>
     </thead>
       <tbody>
@@ -46,11 +48,12 @@
               <td><%= coso.slGV%></td>
               <td>
                   <a href="/sua/<%= coso._id%>"><button>Sửa</button></a>
-                  <a href="/xoa/<%= coso._id%>"><button>Xoa</button></a>
+                  <a href="/xoa/<%= coso._id%>"><button>Xóa</button></a>
               </td>
           </tr>
       <% })%>
       </tbody>
   </table>
-  </body>
+
+      </body>
 </html>
